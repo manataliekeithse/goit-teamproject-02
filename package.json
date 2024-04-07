@@ -1,0 +1,30 @@
+{
+  "name": "goit-teamproject-02",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://ardevazsign.github.io/goit-teamproject-02",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-teamproject-02/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardevazsign/goit-teamproject-02"
+  },
+  "keywords": [],
+  "author": "owen saavedra <newojunior@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardevazsign/goit-teamproject-02/issues"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
