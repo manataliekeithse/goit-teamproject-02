@@ -1,2 +1,26 @@
-@import './common';
-@import './example';
+@import './collab/variable';
+@import './collab/common';
+@import './collab/loader';
+
+@import './body/header-home';
+@import './body/header-library';
+
+@import './collab/modal-movie';
+@import './body/gallery-markup';
+@import './gallery';
+@import './collab/pagination';
+
+@import './body/returnToTop';
+@import './footer.scss';
+@import './body/backdrop';
+
+@import './body/libraryEmpty';
+
+
+
+
+
+
+
+
+
