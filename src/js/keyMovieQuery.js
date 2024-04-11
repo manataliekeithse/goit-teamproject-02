@@ -6,7 +6,6 @@ import {
   requireData,
 } from './popular-gallery';
 import { pagination } from './pagination';
-import { topFunction } from './returnToTop';
 import { filmCheckImgUrl } from './popular-gallery-function';
 
 const refs = {

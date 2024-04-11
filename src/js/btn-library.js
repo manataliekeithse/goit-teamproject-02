@@ -122,7 +122,7 @@ function createMarkup(movies) {
 
       let formatedPosterPath = '';
       if (poster_path === null) {
-        formatedPosterPath = '/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg';
+        formatedPosterPath = '1E5baAaEse26fej7uHcjOgEE2t2.jpg';
       } else {
         formatedPosterPath = poster_path;
       }
