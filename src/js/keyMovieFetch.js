@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const URL_KEY = 'a51a9bb0cd5bc1ed985d30c82a20bd57';
 
-export default class KeyMovieFetch {
+export default class keyMovieFetch {
   constructor() {
     this.inputValue = '';
     this.page = 1;
@@ -11,9 +11,9 @@ export default class KeyMovieFetch {
 
   async fetchMovie() {
     try {
-      const URL = 'https://api.themoviedb.org/3/search/movie';
+      const url = 'https://api.themoviedb.org/3/search/movie';
 
-      const response = await axios.get(URL, {
+      const response = await axios.get(url, {
         params: {
           api_key: URL_KEY,
           query: this.inputValue,
@@ -28,9 +28,8 @@ export default class KeyMovieFetch {
   }
   async getGenre() {
     try {
-      const URL =
-        'https://api.themoviedb.org/3/genre/movie/list?&language=en-US`';
-      const response = await axios.get(URL, {
+      const url = 'https://api.themoviedb.org/3/genre/movie/list?&language=en-US`';
+      const response = await axios.get(url, {
         params: {
           api_key: URL_KEY,
         },

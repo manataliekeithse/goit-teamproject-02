@@ -1,4 +1,4 @@
-import { getMovieById } from './fetch-api';
+import { getMovieById } from './fetch-movie';
 
 import { renderMarkup } from './btn-library';
 

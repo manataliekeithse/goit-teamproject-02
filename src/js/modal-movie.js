@@ -1,4 +1,4 @@
-import { getMovieById } from './fetch-api';
+import { getMovieById } from './fetch-movie';
 
 const modalOneFilmRef = document.querySelector('.film-card');
 const backdropRef = document.querySelector('.backdrop');

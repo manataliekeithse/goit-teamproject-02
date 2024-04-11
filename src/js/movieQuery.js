@@ -1,4 +1,4 @@
-import movieFetch from './movieFetch';
+import keyMovieFetch from './keyMovieFetch';
 import { addToHTML, loadPage } from './popular-gallery';
 import {
   GENRES_FULL_INFO,
@@ -20,7 +20,7 @@ const refs = {
 let SEARCH_ACTIVE = false;
 let total_films;
 let prevSearch = '';
-const keyMovieFetch = new KeyMovieFetch();
+const keyMovieFetch = new keyMovieFetch();
 
 refs.searchForm.addEventListener('submit', onSearchSubmit);
 

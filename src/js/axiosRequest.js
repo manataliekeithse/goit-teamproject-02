@@ -5,7 +5,7 @@ const params = {
 };
 
 export default class AxiosRequestService {
-  construction() {
+  constructor() {
     this.searchQuery = '';
     this.page = 1;
   }

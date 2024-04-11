@@ -1,5 +1,5 @@
 import { renderModalOneFilm, onOpenModal } from './modal-movie';
-import { getMovieById } from './fetch-api';
+import { getMovieById } from './fetch-movie';
 import { pagination } from './pagination';
 import AxiosRequestService from './axiosRequest';
 import createMarkup from './markup-gallery';
