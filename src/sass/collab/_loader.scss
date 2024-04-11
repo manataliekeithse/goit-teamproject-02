@@ -1,5 +1,5 @@
 .fountainG {
-  color: var(--primary-orange-color);
+  color: aqua;
 }
 
 .loader {
@@ -25,7 +25,7 @@
 .fountainG {
   position: absolute;
   top: 0;
-  background-color: var(--primary-orange-color);
+  background-color: aqua;
   width: 33px;
   height: 33px;
   animation-name: bounce_fountainG;
@@ -79,59 +79,59 @@
 @keyframes bounce_fountainG {
   0% {
     transform: scale(1);
-    background-color: var(--primary-orange-color);
+    background-color: aqua;
   }
 
   100% {
     transform: scale(0.3);
-    background-color: var(--secondary-orange-color);
+    background-color: aqua;
   }
 }
 
 @-o-keyframes bounce_fountainG {
   0% {
     -o-transform: scale(1);
-    background-color: var(--primary-orange-color);
+    background-color: aqua;
   }
 
   100% {
     -o-transform: scale(0.3);
-    background-color: var(--secondary-orange-color);
+    background-color: aqua;
   }
 }
 
 @-ms-keyframes bounce_fountainG {
   0% {
     -ms-transform: scale(1);
-    background-color: var(--primary-orange-color);
+    background-color: aqua;
   }
 
   100% {
     -ms-transform: scale(0.3);
-    background-color: var(--secondary-orange-color);
+    background-color: aqua;
   }
 }
 
 @-webkit-keyframes bounce_fountainG {
   0% {
     -webkit-transform: scale(1);
-    background-color: var(--primary-orange-color);
+    background-color: aqua;
   }
 
   100% {
     -webkit-transform: scale(0.3);
-    background-color: var(--secondary-orange-color);
+    background-color: aqua;
   }
 }
 
 @-moz-keyframes bounce_fountainG {
   0% {
     -moz-transform: scale(1);
-    background-color: var(--primary-orange-color);
+    background-color: aqua;
   }
 
   100% {
     -moz-transform: scale(0.3);
-    background-color: var(--secondary-orange-color);
+    background-color: aqua;
   }
 }

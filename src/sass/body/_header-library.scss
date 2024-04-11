@@ -1,16 +1,16 @@
+.icon-film use {
+  fill: aqua;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
 .library-header {
   padding-top: 40px;
   padding-bottom: 62px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  .icon-film use {
-      fill: var(--main-color);
-      box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 3px 0 rgba(0, 0, 0, 0.12),
-        0 1px 1px 0 rgba(0, 0, 0, 0.14);
-    }
+  
 
   @media screen and (max-width: 767px) {
     background-image: linear-gradient(to right,
@@ -68,13 +68,12 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 32px;
   line-height: 35px;
   vertical-align: top;
   align-items: center;
   text-align: center;
   margin-left: 10px;
-
   display: none;
   transition: color var(--duration) var(--timing-function);
 
@@ -93,11 +92,10 @@
 .library-header--list {
   display: flex;
   list-style: none;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 14px;
   align-items: center;
   text-align: center;
@@ -157,7 +155,7 @@
   text-align: center;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.33;
 
   border-radius: 5px;
@@ -199,6 +197,7 @@
 // header shadow anima
 .library-header--logo__name {
   position: relative;
+  font-size: 34px;
 }
 
 .library-header--logo__name::before {
@@ -215,7 +214,7 @@
 }
 
 .library-header--logo__name:hover::before {
-  background: var(--white-color);
+  background: aqua;
   top: 30px;
 }
 
@@ -237,6 +236,6 @@
 }
 
 .library-header--list__link:hover::before {
-  background: var(--white-color);
+  background: aqua;
   top: 20px;
 }
