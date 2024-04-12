@@ -1,5 +1,5 @@
 .icon-film use {
-  fill: aqua;
+  fill: grey;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
@@ -214,7 +214,7 @@
 }
 
 .library-header--logo__name:hover::before {
-  background: aqua;
+ 
   top: 30px;
 }
 
@@ -236,6 +236,6 @@
 }
 
 .library-header--list__link:hover::before {
-  background: aqua;
+ 
   top: 20px;
 }

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const URL_KEY = 'a51a9bb0cd5bc1ed985d30c82a20bd57';
 
-export default class keyMovieFetch {
+export default class KeyMovieFetch {
   constructor() {
     this.inputValue = '';
     this.page = 1;
