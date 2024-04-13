@@ -3,6 +3,10 @@ import axios from 'axios';
 const URL_KEY = 'a51a9bb0cd5bc1ed985d30c82a20bd57';
 
 export default class KeyMovieFetch {
+  static resetPage() {
+    this.page = 1;
+  }
+
   constructor() {
     this.inputValue = '';
     this.page = 1;
@@ -26,6 +30,7 @@ export default class KeyMovieFetch {
       console.log(error.message);
     }
   }
+
   async getGenre() {
     try {
       const url = 'https://api.themoviedb.org/3/genre/movie/list?&language=en-US`';
@@ -42,10 +47,6 @@ export default class KeyMovieFetch {
 
   incrementPage() {
     this.page += 1;
-  }
-
-  resetPage() {
-    this.page = 1;
   }
 
   get value() {

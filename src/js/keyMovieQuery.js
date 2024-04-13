@@ -1,12 +1,12 @@
-import keyMovieFetch from './keyMovieFetch';
-import { addToHTML, loadPage } from './popular-gallery';
+import KeyMovieFetch from './keyMovieFetch.js';
+import { addToHTML, loadPage } from './popular-gallery.js';
 import {
   GENRES_FULL_INFO,
   onPaginLoadMore,
   requireData,
-} from './popular-gallery';
-import { pagination } from './pagination';
-import { filmCheckImgUrl } from './popular-gallery-function';
+} from './popular-gallery.js';
+import { pagination } from './pagination.js';
+import { filmCheckImgUrl } from './popular-gallery-function.js';
 
 const refs = {
   searchForm: document.querySelector('.header-search-form'),
@@ -19,8 +19,7 @@ const refs = {
 let SEARCH_ACTIVE = false;
 let total_films;
 let prevSearch = '';
-const keyMovieFetch = new keyMovieFetch();
-
+let keyMovieFetchInstance;
 refs.searchForm.addEventListener('submit', onSearchSubmit);
 
 
@@ -30,10 +29,12 @@ async function onSearchSubmit(evt) {
     evt.stopPropagation();
     refs.paginationCont.classList.remove('is-hidden');
     
-    keyMovieFetch.resetPage();
+    KeyMovieFetch.resetPage()
+
+    keyMovieFetchInstance = new KeyMovieFetch();
    
-    keyMovieFetch.value = evt.currentTarget.elements.searchQuery.value;
-    if (keyMovieFetch.value === '') {
+    keyMovieFetchInstance.value = evt.currentTarget.elements.searchQuery.value;
+    if (keyMovieFetchInstance.value === '') {
      
       refs.searchMessage.classList.remove('is-hidden');
      
@@ -45,14 +46,14 @@ async function onSearchSubmit(evt) {
     
       return;
     }
-    if (keyMovieFetch.value !== '') {
-      const fetch = await keyMovieFetch.fetchMovie(keyMovieFetch.value);
+    if (keyMovieFetchInstance.value !== '') {
+      const fetch = await keyMovieFetchInstance.fetchMovie();
    
       total_films = fetch.total_results;
     
       if (fetch.total_results) {
-        prevSearch = keyMovieFetch.value;
-        keyMovieFetch.value;
+        prevSearch = keyMovieFetchInstance.value;
+        keyMovieFetchInstance.value
         refs.gallery.innerHTML = '';
         pagination.reset(fetch.total_results);
         const { results } = fetch;
@@ -67,7 +68,7 @@ async function onSearchSubmit(evt) {
       
     }
     if (total_films === 0) {
-      keyMovieFetch.value = prevSearch;
+      keyMovieFetchInstance.value = prevSearch;
       refs.searchMessage.classList.remove('is-hidden');
      
       refs.searchMessage.innerHTML =
@@ -86,8 +87,8 @@ async function onSearchSubmit(evt) {
 
 async function renderGalleryKey() {
   
-  if (keyMovieFetch.value !== '') {
-    const fetch = await keyMovieFetch.fetchMovie(keyMovieFetch.value);
+  if (keyMovieFetchInstance.value !== '') {
+    const fetch = await keyMovieFetchInstance.fetchMovie();
    
     const { results } = fetch;
 
@@ -177,16 +178,16 @@ async function createMarkupKey(data) {
   addToHTML(markup);
 }
 
-pagination.on('afterMove', event => {
+pagination.on('afterMove', async event => {
   const currentPage = event.page;
   if (SEARCH_ACTIVE) {
     const currentPage = event.page;
    
-    keyMovieFetch.page = currentPage;
-    renderGalleryKey();
-    topFunction();
+    keyMovieFetchInstance.page = currentPage;
+    await renderGalleryKey();
+    //topFunction();
   } else {
     onPaginLoadMore(currentPage);
-    topFunction();
+    //topFunction();
   }
 });
