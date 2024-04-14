@@ -16,3 +16,9 @@
   display: flex;
   align-items: center;
 }
+
+.footer__icon:hover,
+.footer__icon:focus {
+  color: black;
+  background-color: #ff6b0a;
+}
